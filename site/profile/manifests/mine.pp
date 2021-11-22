@@ -1,3 +1,5 @@
 class profile::mine {
-  include mine
+  class{'mine':
+    install_dir => '/srv/mine',
+  }
 }
