@@ -4,7 +4,7 @@ node 'master.puppet.vm' {
   include role::control_server
   file { '/root/README':
     ensure  => file,
-    content => $fqdn,
+    content => "You're logged on to ${fqdn}.\n Watch your step!!\n",
     owner   => 'root',
   }
 }
