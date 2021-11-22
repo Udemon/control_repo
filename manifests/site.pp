@@ -8,11 +8,12 @@ node 'master.puppet.vm' {
     owner   => 'root',
   }
 }
-
+node 'mc.puppet.vm' {
+  include role::mc_server
+}
 node /^web/ {
   include role::app_server
 }
-
 node /^db/ {
   include role::db_server
 }
