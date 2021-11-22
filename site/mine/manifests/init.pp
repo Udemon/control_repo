@@ -15,7 +15,7 @@ class mine {
   }
   file {'/etc/systemd/system/mine.service':
     ensure => present,
-    source => puppet:///modules/mine/mine.service',
+    source => 'puppet:///modules/mine/mine.service',
   }
   service {'mine':
     ensure => running,
