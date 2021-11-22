@@ -17,4 +17,8 @@ class mine {
     ensure => present,
     source => puppet:///modules/mine/mine.service',
   }
+  service {'mine':
+    ensure => running,
+    enable => true,
+  }
 }  
