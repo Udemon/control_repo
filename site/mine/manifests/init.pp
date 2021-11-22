@@ -1,6 +1,6 @@
 class mine (
   $install_dir = '/opt/mc',
-  $src_url     = 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar',
+  $src_url     = 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar'
 )
 {
   file {$install_dir:
