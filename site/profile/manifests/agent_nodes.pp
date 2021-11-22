@@ -3,13 +3,13 @@ class profile::agent_nodes{
   dockeragent::node{'web.puppet.vm':}
   dockeragent::node{'db.puppet.vm':}
   host {'web.puppet.vm':
-    ensure     => present,
-    ip         => '172.18.0.2',
-    host_alias => 'websrv',
+    ensure       => present,
+    ip           => '172.18.0.2',
+    host_aliases => 'websrv',
   }
   host {'db.puppet.vm':
-    ensure     => present,
-    ip         => '172.18.0.3',
-    host_alias => 'dbsrv'
+    ensure       => present,
+    ip           => '172.18.0.3',
+    host_aliases => 'dbsrv'
   }
 } 
