@@ -19,8 +19,10 @@ class mine (
     content => 'eula=true',
   }
   file {'/etc/systemd/system/mine.service':
-    ensure => present,
-    source => 'puppet:///modules/mine/mine.service',
+    ensure  => present,
+    content => epp('mine/mine.service',{
+      install_dir => $install_dir
+    }),
   }
   service {'mine':
     ensure  => running,
